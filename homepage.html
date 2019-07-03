@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    nav {
+      height: 60px;
+      width: 100%;
+      background:#3676a3;
+      color: #fff;
+      line-height: 60px;
+    }
+
+    #login_info {
+      float: left;
+    }
+
+    #logout_button {
+      background: black;
+      width: 100px;
+      cursor: pointer;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      float: right;
+      margin-top: 10px;
+      padding: 10px;
+      margin-right: 10px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <p id="login_info"></p>
+    <button id="logout_button">Logout</button>
+  </nav>
+  <script>
+    if (localStorage.isMatch === "false") {
+      window.location = 'login.html'
+    }
+    document.getElementById('logout_button').addEventListener('click',function(e){
+      e.preventDefault();
+      localStorage.setItem('isMatch',false);
+      window.location = 'login.html'
+    });
+    document.getElementById('login_info').innerHTML = 'Logged in as: '+ localStorage.getItem('user')
+  </script>
+</body>
+
+</html>

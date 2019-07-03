@@ -83,6 +83,6 @@ register.addEventListener('click',function(e){
     Password: hash
   }
   localStorage.setItem(key,JSON.stringify(obj));
-  window.location = 'data.html';
+  window.location = 'login.html';
 
 })
