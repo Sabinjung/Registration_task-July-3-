@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <form class="bg-light">
+          <div class="container">
+            <h1 class="text-center font-weight-bold  mt-4 mb-4">REGISTER FORM</h1>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Type Your Username" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="Type Your Email" required>
+              <span id="e_message"></span>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Type Your Password" required>
+            </div>
+            <div class="form-group">
+              <label for="cpwd">Confirm Password</label>
+              <input type="password" class="form-control" id="cpwd" placeholder="Confirm Your Password" required>
+              <span id="p_message"></span>
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" id='checkbox' type="checkbox" required> Accept Terms and Conditions
+              </label>
+            </div>
+            <button id='register' class="mt-4 mb-4" disabled>REGISTER</button>
+            <p id="r_message"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="md5.min.js"></script>
+  <script src="/index.js"></script>
+</body>
+
+</html>
